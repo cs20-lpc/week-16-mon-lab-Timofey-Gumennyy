@@ -16,8 +16,9 @@ private:
     void siftDown(int i);
 
 public:
-    MinHeap() {}
+    MinHeap(const vector<T>& arr) : data(arr) {}
 
+    void Heapify();
     void insert(const T& value);
     T removeRoot();
     void removeAt(int index);
